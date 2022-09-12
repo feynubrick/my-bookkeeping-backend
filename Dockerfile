@@ -1,5 +1,5 @@
 FROM node:16.17-bullseye
-WORKDIR /usr/src/app
+WORKDIR /app
 
 RUN npm install -g typescript
 COPY package*.json ./
