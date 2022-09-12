@@ -3,10 +3,9 @@ WORKDIR /app
 
 RUN npm install -g typescript
 COPY package*.json ./
-RUN npm install --production
+RUN npm install
 
 COPY tsconfig.json ./
 COPY ./src/ src/
-RUN npm run build
 
-CMD npm run start
+CMD npm run dev
