@@ -24,7 +24,7 @@ services:
     networks:
       - backend
     volumes:
-      - ./liquibase.properties:/liquibase/liquibase.properties
+      - ./database/liquibase.properties:/liquibase/liquibase.properties
       - ./database/changelog:/liquibase/changelog/
       - ./database/changelog/_root.sql:/liquibase/changelog.sql
     command: liquibase --changelog-file=_root.sql update
